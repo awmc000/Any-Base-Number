@@ -68,19 +68,30 @@ public class AnyBaseNumber
         return newDigits;
         
     }
-    
+    /** 
+     * Add the given number to this number. Uses base 10 addition and
+     * converts it back.
+     */
     public void add(AnyBaseNumber b) {
 		this.base10Value = this.base10Value + b.base10Value;
         String[] numberRep = convertNum(base10Value);
         this.digits = numberRep;
 	}
     
+    /**
+     * Multiply this number by the given number. Uses base 10 multiplication
+     * and converts it back.
+     */
     public void multiply(AnyBaseNumber b) {
 		this.base10Value = this.base10Value * b.base10Value;
         String[] numberRep = convertNum(base10Value);
         this.digits = numberRep;
 	}
     
+    /**
+     * Returns a string representation of number in given bases with
+     * given symbols.
+     */
     public String toString()
     {
         String numberStr = "";
